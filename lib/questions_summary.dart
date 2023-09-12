@@ -15,7 +15,26 @@ class QuestionsSummary extends StatelessWidget {
             (data) {
               return Row(
                 children: [
-                  Text(((data['question_index'] as int) + 1).toString()),
+                  Container(
+                    width: 30,
+                    height: 30,
+                    padding:
+                        const EdgeInsets.symmetric(vertical: 6, horizontal: 10),
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        color: Colors.white,
+                      ),
+                      gradient: const LinearGradient(
+                        colors: [
+                          Color.fromARGB(255, 141, 22, 205),
+                          Color.fromARGB(255, 140, 51, 217),
+                        ],
+                      ),
+                      borderRadius: BorderRadius.circular(50),
+                    ),
+                    child:
+                        Text(((data['question_index'] as int) + 1).toString()),
+                  ),
                   Expanded(
                     child: Column(
                       children: [
