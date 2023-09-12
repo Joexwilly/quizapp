@@ -38,11 +38,27 @@ class QuestionsSummary extends StatelessWidget {
                   Expanded(
                     child: Column(
                       children: [
-                        Text(data['question'] as String),
+                        Text(
+                          data['question'] as String,
+                          style: const TextStyle(
+                            color: Color.fromARGB(225, 255, 255, 255),
+                            fontSize: 13,
+                            //  fontWeight: FontWeight.bold,
+                          ),
+                        ),
                         const SizedBox(height: 5),
-                        Text(data['user_answer'] as String),
+                        Text(
+                          data['user_answer'] as String,
+                          style: const TextStyle(
+                            color: Color.fromARGB(211, 92, 167, 225),
+                            fontSize: 10,
+                          ),
+                        ),
                         Text(
                           data['correct_answer'] as String,
+                          style: const TextStyle(
+                            color: Color.fromARGB(211, 92, 167, 225),
+                          ),
                         ),
                       ],
                     ),

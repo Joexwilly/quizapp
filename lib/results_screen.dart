@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:quizapp/answer_button.dart';
 import 'package:quizapp/data/questions.dart';
 import 'package:quizapp/questions_summary.dart';
+import 'package:quizapp/start_screen.dart';
 
 class ResultsScreen extends StatelessWidget {
   const ResultsScreen({super.key, required this.chosenAnswers});
@@ -32,6 +34,11 @@ class ResultsScreen extends StatelessWidget {
         return data['user_answer'] == data['correct_answer'];
       },
     ).length;
+    //restart quiz
+    void restartQuiz() {
+      chosenAnswers.clear();
+    }
+
     return SizedBox(
       width: double.infinity,
       child: Container(
